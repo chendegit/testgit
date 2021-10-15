@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalab=no,
+     initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            /* font-size: 62.5%; */
+            font-size: 10px;
+        }
+        div{
+            font-size: 2rem;
+        }
+        h1{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        hhh,div元素
+        <h1>div的h1</h1>
+    </div>
+</body>
+<script>
+    function setRem(){
+        var uiw=375;
+        var clith=document.documentElement.clientWidth||document.body.clientWidth;
+
+        var htl=document.getElementsByTagName('html')[0];
+        htl.style.fontSize=(clith/uiw)*10+'px';
+    }
+    window.onresize=setRem;
+</script>
+</html>
